@@ -47,11 +47,13 @@ public:
                 int currLen = partLen + (1 ? mod > 0 : 0);
                 --mod;
                 result.push_back(curr);
-                for (int j=0; j<currLen; ++j) {
+                for (int j=0; j<=currLen-1; ++j) {
+                    if (j == currLen-1) {
+                        prev = curr;
+                    }
                     curr = curr->next;
-                    prev->next = NULL;
-                    prev = curr;
                 }
+                prev->next = NULL;
             }
         return result;
         }
