@@ -11,8 +11,8 @@ public:
         }
         auto zeroIt = std::find(indexes.begin(), indexes.end(), 0) + 1;
         auto twiceIt = std::find(indexes.begin(), indexes.end(), 2) + 1;
-        auto notAppeard = static_cast<int>(zeroIt - indexes.begin());
-        auto twiceAppeard = static_cast<int>(twiceIt - indexes.begin());
-        return {twiceAppeard, notAppeard};
+        auto notAppeared = static_cast<int>(zeroIt - indexes.begin());
+        auto twiceAppeared = static_cast<int>(twiceIt - indexes.begin());
+        return {twiceAppeared, notAppeared};
     }
 };
