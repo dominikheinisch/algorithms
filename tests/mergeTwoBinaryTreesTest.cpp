@@ -13,7 +13,6 @@ struct MergeTwoBinaryTreesTest : public ::testing::Test {
 
     void createTrees() {
         std::vector<int> nums = {1,3,2,5,2,1,3,4,7};
-        std::vector<TreeNode> treeNodes;
         for (auto i : nums) {
             treeNodes.push_back(i);
         }
@@ -40,10 +39,35 @@ struct MergeTwoBinaryTreesTest : public ::testing::Test {
     std::unique_ptr<Solution> sut;
     TreeNode* root1;
     TreeNode* root2;
+    std::vector<TreeNode> treeNodes;
 };
 
-TEST_F(MergeTwoBinaryTreesTest, testTree)
+TEST_F(MergeTwoBinaryTreesTest, testNullRecursion)
+{
+    TreeNode* newRoot = sut->recursiveMergeTrees(NULL, NULL);
+    ASSERT_TRUE(newRoot == NULL);
+}
+
+TEST_F(MergeTwoBinaryTreesTest, testRecursion)
 {
     TreeNode* newRoot = sut->recursiveMergeTrees(root1, root2);
     assertEq(newRoot);
+}
+
+TEST_F(MergeTwoBinaryTreesTest, testNullStack)
+{
+    TreeNode* newRoot = sut->mergeTrees(NULL, NULL);
+    ASSERT_TRUE(newRoot == NULL);
+}
+
+TEST_F(MergeTwoBinaryTreesTest, testStack)
+{
+    TreeNode* newRoot = sut->mergeTrees(root1, root2);
+    assertEq(newRoot);
+}
+
+TEST_F(MergeTwoBinaryTreesTest, testStackNullLeft)
+{
+    TreeNode* newRoot = sut->mergeTrees(NULL, root2);
+    ASSERT_EQ(newRoot, root2);
 }
