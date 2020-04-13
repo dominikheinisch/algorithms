@@ -11,7 +11,7 @@ public:
     }
 };
 
-class Solution {
+class SolutionCopyRandomList {
 public:
     Node* copyRandomList(Node* head) {
         if  (!head) {
