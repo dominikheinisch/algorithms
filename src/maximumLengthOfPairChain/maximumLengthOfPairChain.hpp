@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <vector>
 
-class Solution {
+class SolutionFindLongestChain {
 public:
     int findLongestChain(std::vector<std::vector<int>>& pairs) {
         std::sort(pairs.begin(), pairs.end(), [](const auto& pair1, const auto& pair2) {
