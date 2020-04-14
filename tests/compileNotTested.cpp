@@ -3,5 +3,6 @@
 #include "maximumLengthOfPairChain/maximumLengthOfPairChain.hpp"
 #include "numberOfIslands.hpp"
 #include "optimalDivision.hpp"
+#include "partitionLabels.hpp"
 #include "searchSuggestionsSystem.hpp"
 #include "subtreeOfAnotherTree/subtreeOfAnotherTree.hpp"
