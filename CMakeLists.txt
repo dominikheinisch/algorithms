@@ -5,7 +5,7 @@ option(ut "Build all tests." ON)
 
 project(Proj)
 
-set(CMAKE_CXX_FLAGS "-g -Wall -Werror -Wno-missing-braces")
+set(CMAKE_CXX_FLAGS "-g -Wall -Wno-missing-braces")
 set(CMAKE_CXX_STANDARD 17)
 
 set(PROJECT_SRC src)
