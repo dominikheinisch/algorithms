@@ -2,6 +2,7 @@
 #include "convertBstToGreaterTree.hpp"
 #include "cutOffTreesForGolfEvent/cutOffTreesForGolfEvent.hpp"
 #include "maximumLengthOfPairChain/maximumLengthOfPairChain.hpp"
+#include "maximumWidthOfBinaryTree.hpp"
 #include "mostFrequentSubtreeSum.hpp"
 #include "numberOfIslands.hpp"
 #include "optimalDivision.hpp"
